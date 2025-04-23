@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: white;
+  color: #222222;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply white background when in ribbon mode (for mobile) */
+.App.ribbon-mode {
+  background-color: white;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  font-weight: bold;
+  pointer-events: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header > * {
+  pointer-events: auto;
+}
+
+.header a{
+  color:#000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  font-size: 12px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.footer > * {
+  pointer-events: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #222222;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.social-icon svg {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav span, .logo {
+  cursor: pointer;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.ribbon {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.ribbon-path {
+  fill: none;
+  stroke-width: 65;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: all 0.3s ease;
+  mix-blend-mode: normal;
+}
+
+.ribbon text {
+  fill: #222222;
+  font-size: 30px;
+  font-weight: bold;
+  pointer-events: none;
+  text-rendering: geometricPrecision;
+  dominant-baseline: middle;
+  transition: all 0.3s ease;
+  mix-blend-mode: normal;
+}
+
+/* Original colors for paths */
+#path1 { stroke: #ea614b; }
+#path2 { stroke: #f9c846; }
+#path3 { stroke: #8e5b4a; }
+#path4 { stroke: #222222; }
+#path5 { stroke: #f46e96; }
+#path6 { stroke: #6933be; }
+
+/* Special case for ribbon4 text which is white */
+#ribbon4 text, #ribbon3 text, #ribbon6 text {
+  fill: #ffffff;
+}
+
+/* Apply transparent white effect only when dimmed */
+.ribbon.dimmed .ribbon-path {
+  stroke: rgba(255, 255, 255, 0.15) !important;
+  mix-blend-mode: plus-lighter;
+  filter: brightness(1.5) blur(0.3px);
+}
+
+.ribbon.dimmed text {
+  fill: rgba(255, 255, 255, 0.3) !important;
+  mix-blend-mode: plus-lighter;
+  filter: brightness(1.2);
+}
+
+/* Keep white text for ribbon4 when dimmed but adjust opacity */
+#ribbon4.dimmed text {
+  fill: rgba(255, 255, 255, 0.3) !important;
+  mix-blend-mode: plus-lighter;
+}
+
+.floating-button {
+  position: fixed;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+  z-index: 1001;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.floating-button.visible {
+  opacity: 1;
+}
+
+/* Ensure button is extra visible during loading */
+.floating-button.visible span.spinner {
+  display: inline-block !important;
+  opacity: 1 !important;
+}
+
+.floating-button.mobile {
+  position: static;
+  display: inline-block;
+  transform: none;
+  padding: 14px 28px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button-wrapper {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.background-media {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  background: #1a1a1a; /* Dark fallback background */
+}
+
+.background-media.loading {
+  opacity: 0.6; /* Show a semi-visible background while loading */
+}
+
+.background-media.visible {
+  opacity: 1;
+}
+
+.background-media img,
+.background-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+  filter: brightness(0.8) contrast(1.15);
+  transition: all 0.6s ease;
+}
+
+.background-media.mobile {
+  z-index: 0;
+}
+
+.case-study-container{
+  padding-top:2rem;
+}
+
+/* Mobile Ribbon View Styles */
+.mobile-ribbon-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none; /* Hidden by default, will be shown in media query */
+}
+
+.mobile-ribbon-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  transform-origin: center center;
+}
+
+.project-indicator {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  z-index: 1000;
+  color: #222222;
+  font-weight: 500;
+}
+
+/* Mode Toggle Button Styles */
+/*
+.mode-toggle-button {
+  ...
+}
+*/
+
+/* Pagination Styles */
+.pagination-dots {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  z-index: 101;
+  padding: 0 8px;
+  justify-content: center;
+  transform: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.pagination-dot-container {
+  flex: 1;
+  max-width: 60px;
+  cursor: pointer;
+  margin: 0 2px;
+  height: 2px;
+  position: relative;
+}
+
+.pagination-dot {
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  transition: all 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pagination-dot-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 1px;
+  background-color: white;
+}
+
+.pagination-dot.active {
+  transform: scale(1, 1.5);
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.ribbon-mode .pagination-dot{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.ribbon-mode .pagination-dot.active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.ribbon-mode .pagination-dot-fill{
+  background-color: #333;
+}
+
+.ribbon-mode .pagination-dot.active{
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: scale(1, 1);
+}
+
+/* Media Queries for Responsive Layout */
+@media screen and (max-width: 768px) {
+  .svg-container {
+    display: none; /* Hide desktop ribbons */
+  }
+  
+  /* MobileRibbonView container is always visible when this media query is active */
+  .mobile-ribbon-container {
+    display: block;
+  }
+  
+  .floating-button {
+    opacity: 1;
+    display: none;
+  }
+  
+  .floating-button.mobile {
+    display: inline-block;
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 16px 32px;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+    border-radius: 28px;
+    background-color: rgba(0, 0, 0, 0.95);
+  }
+  
+  .background-media.mobile.visible {
+    opacity: 1;
+    z-index: 0;
+  }
+  
+
+  /* Apply SVG scaling only when ribbon is visible in ribbon mode */
+  .App.ribbon-mode .mobile-ribbon-svg {
+    z-index: 2;
+    position: relative;
+    transform: scale(2.8);
+  }
+  
+  /* Only apply transparent styles when NOT in ribbon-mode */
+  .mobile-ribbon-container .ribbon-path {
+    stroke-width: 40;
+  }
+
+
+
+  /* When in ribbon-mode, restore original text colors */
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon1 text,
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon2 text,
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon5 text {
+    fill: #222222 !important; /* Default black */
+  }
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon3 text,
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon4 text,
+  .App.ribbon-mode .mobile-ribbon-container #mobile-ribbon-ribbon6 text {
+    fill: #ffffff !important; /* Keep white for these */
+  }
+
+  /* --- Header Styling for Mobile --- */
+  .case-study-container .header {
+    /* Default mobile header: blurred background */
+    background: rgba( 255, 255, 255, 0.25 );
+    stroke: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+  }
+  .header a {
+    color:#fff; /* Default mobile link color */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Header styling when in ribbon mode */
+  .App.ribbon-mode .header {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    
+  }
+  .App.ribbon-mode .header a {
+    color: #000; /* Black links on white header */
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0);
+  }
+  /* --- End Header Styling --- */
+
+  .case-study-container{
+    padding-top:4rem;
+  } 
+  
+  .case-study-container .header a,
+  .about-container .header a{
+    color:#000;
+    text-shadow:none;
+  }
+  .App:not(.ribbon-mode) .footer, .App:not(.ribbon-mode) .social-icon{
+    color:#fff;
+  }
+
+  /* Mobile footer specific styles */
+  .footer {
+    padding: 1rem;
+    z-index: 110; /* Ensure it's above other elements but below the toggle */
+  }
+  
+  .social-icons {
+    gap: 1.5rem; /* Increase spacing between icons on mobile */
+  }
+  
+  .social-icon svg {
+    width: 18px; /* Slightly larger icons on mobile */
+    height: 18px;
+  }
+  
+  /* Ensure footer is visible on both modes */
+  .App.ribbon-mode .footer, 
+  .App.ribbon-mode .social-icon {
+    color: #000;
+  }
+}
+
+/* New Video Toggle Switch Styles */
+.video-toggle-switch-container {
+  position: fixed;
+  bottom: 80px; /* Align roughly with pagination dots */
+  left:20px;
+  z-index: 111102; /* Above pagination dots */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.video-toggle-label {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff; /* White text for visibility on media */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  user-select: none;
+}
+
+/* Hide the actual checkbox */
+.video-toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.video-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;  /* Adjust width */
+  height: 26px; /* Adjust height */
+  border:4px #ccc;
+  background:transparent;
+  border-radius: 13px; /* Half of height */
+  transition: background-color 0.2s ease;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.video-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;  /* Height - 2 * padding/border */
+  height: 16px; /* Height - 2 * padding/border */
+  border-radius: 50%;
+  background:rgba(0,0,0,0.5);
+  border:2px #000;
+  transition: transform 0.2s ease;
+}
+
+/* Checked state (Media Mode) */
+.video-toggle-checkbox:checked + .video-toggle-switch {
+  background:transparent;
+  border-color:rgba(255,255,255,0.4);
+}
+
+.video-toggle-checkbox:checked + .video-toggle-switch .video-toggle-knob {
+  transform: translateX(22px); /* Width - Knob Width - 2*padding/border */
+  background:#fff;
+}
+
+/* Styles when in Ribbon Mode */
+.App.ribbon-mode .video-toggle-label {
+  color: rgba(0,0,0,0.5); /* Darker text on white background */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.App.ribbon-mode .video-toggle-switch {
+  background-color: transparent;
+}
+
+.App.ribbon-mode .video-toggle-checkbox:checked + .video-toggle-switch {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .header{
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Typography assignments */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header, 
+.nav, 
+.footer,
+.social-icons,
+.ribbon text,
+.floating-button,
+.pagination-dots,
+.video-toggle-label {
+  font-family: "proxima-nova", sans-serif;
+}

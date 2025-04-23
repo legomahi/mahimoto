@@ -1,0 +1,793 @@
+.case-study-container {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  color: #222;
+  font-family: 'Lora', serif;
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Typography assignments */
+.case-study-container h1,
+.case-study-container h2,
+.case-study-container h3,
+.case-study-container h4,
+.case-study-container h5,
+.case-study-container h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.cs-header,
+.cs-nav,
+.cs-back-link,
+.cs-footer,
+.carousel-button {
+  font-family: "proxima-nova", sans-serif;
+}
+
+img{
+  border-radius:10px;
+}
+
+.cs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  background-color: #f8f8f8;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cs-back-link, .cs-nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cs-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.cs-content-area {
+  flex: 1;
+  padding: 0; /* Remove padding, handled by sections */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cs-main-title {
+  font-size: 10rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 3rem;
+  padding: 2rem 1.5rem 0; /* Top padding added here */
+  max-width: 1280px; /* Constrain title width */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Base section styles */
+section {
+  box-sizing: border-box;
+  margin: 0 auto; /* Center sections */
+  padding: 3rem 1.5rem 1rem;
+  max-width: 1280px; /* Default max width for text content */
+}
+
+/* Intro section styles */
+section.Intro {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+  padding-top: 0; /* Remove top padding, handled by cs-main-title */
+  padding-bottom:0;
+}
+
+section.Intro .sidebar {
+  font-size: 1.2rem;
+}
+
+section.Intro .sidebar .cs-info-section {
+  margin-bottom: 2rem;
+}
+
+section.Intro .sidebar .cs-info-section h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+section.Intro .sidebar .cs-info-section p {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+section.Intro .sidebar .cs-info-subtext {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+section.Intro .lead h1 {
+  font-size: 8rem;
+  margin-bottom: 3rem;
+  font-weight: 460;
+}
+
+section.Intro .lead p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 2rem;
+}
+
+/* Content blocks */
+section.content-block {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+}
+
+section.content-block > *:first-child {
+  grid-column: 2 / 3; /* Content goes in the right column */
+}
+
+section.content-block h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+section.content-block h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+section.content-block p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Common image styles */
+section.image {
+  max-width: 100vw; /* Override default max-width */
+  padding: 0; /* Remove padding for edge-to-edge */
+  margin: 20px 0; /* Vertical margin */
+}
+
+/* Natural-size image section - make it identical to content-block */
+section.image.natural-size {
+  max-width: 1280px; /* Same as content blocks */
+  margin: 0px auto 2rem; /* Center like content blocks */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+}
+
+section.image.natural-size .image-container {
+  grid-column: 2 / 3; /* Right column, same as content blocks */
+}
+
+section.image.natural-size img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin:0 auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Grid images */
+section.image.grid {
+  width: calc(100vw - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+section.image.grid .image-item {
+  display: flex;
+  flex-direction: column;
+}
+
+section.image.grid img {
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+}
+
+/* Full-width images */
+section.image.full-width img {
+  display: block;
+  width: auto; /* Changed from fixed width to auto */
+  width: calc(100vw - 40px); 
+  height: auto;
+  margin: 0 auto; /* Center the image with padding */
+  box-shadow: none;
+}
+
+/* Carousel styles */
+section.image.carousel {
+  width: calc(100vw - 40px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden; /* Hides non-active slides */
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  max-height: 70vh; /* Example max-height */
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or contain, depending on desired effect */
+  max-height: 70vh; /* Match wrapper max-height */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+}
+
+.carousel-button.prev {
+  left: 25px;
+}
+
+.carousel-button.next {
+  right: 25px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-dot.active {
+  background-color: white;
+}
+
+/* Footer styles */
+.cs-footer {
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Video styles - following the natural-size image pattern */
+section.video-section {
+  max-width: 1280px; /* Same as content blocks */
+  margin: 0px auto 2rem; /* Center like content blocks */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 2rem;
+}
+
+section.video-section .video-container {
+  grid-column: 2 / 3; /* Right column, same as content blocks */
+  width: 100%;
+}
+
+section.video-section video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Light background for videos without posters */
+}
+
+/* Make sure the video doesn't have weird aspect ratio issues */
+section.video-section video[poster] {
+  object-fit: contain;
+  background-color: transparent;
+  aspect-ratio: 16 / 9;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .cs-main-title {
+    font-size: 3.5rem;
+    padding: 1rem 1rem 0;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  section.image {
+    margin: 10px 0;
+  }
+
+  section.Intro {
+    grid-template-columns: 1fr;
+  }
+
+  section.Intro .sidebar {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  section.Intro .lead {
+    order: 1;
+  }
+  
+  section.Intro .lead h1 {
+    font-size: 3.5rem;
+  }
+  
+  section.Intro .lead p {
+    font-size: 1.6rem;
+  }
+
+  section.content-block {
+    grid-template-columns: 1fr; /* Stack content */
+  }
+
+  section.content-block > *:first-child {
+    grid-column: 1 / 2; /* Reset column span */
+  }
+  
+  section.image.natural-size {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 1rem;
+  }
+  
+  section.image.natural-size .image-container {
+    grid-column: 1 / 2; /* Full width on mobile */
+  }
+
+  section.image.full-width img,
+  section.image.grid,
+  section.image.carousel {
+    width: calc(100vw - 20px); /* 10px padding */
+  }
+
+  section.image.grid {
+    grid-template-columns: 1fr; /* Stack grid images */
+    gap: 10px;
+  }
+
+  .carousel-button {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+  }
+  
+  .carousel-button.prev { left: 15px; }
+  .carousel-button.next { right: 15px; }
+  .carousel-dots { bottom: 15px; }
+  .carousel-dot { width: 10px; height: 10px; }
+
+  section.video-section {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 1rem;
+  }
+  
+  section.video-section .video-container {
+    grid-column: 1 / 2; /* Full width on mobile */
+  }
+} 
+
+/* Large screen styles */
+@media (min-width: 1440px) {
+  .cs-main-title {
+    font-size: 12rem;
+    max-width: 1600px;
+  }
+  
+  section {
+    max-width: 1600px;
+  }
+  
+  section.image.natural-size {
+    max-width: 1600px;
+  }
+  
+  section.Intro .sidebar {
+    font-size: 1.4rem;
+  }
+  
+  section.Intro .sidebar .cs-info-section h5 {
+    font-size: 1.2rem;
+  }
+  
+  section.Intro .sidebar .cs-info-subtext {
+    font-size: 1rem;
+  }
+  
+  section.Intro .lead h1 {
+    font-size: 10rem;
+  }
+  
+  section.Intro .lead p {
+    font-size: 2.5rem;
+  }
+  
+  section.content-block h2 {
+    font-size: 1.2rem;
+  }
+  
+  section.content-block h4 {
+    font-size: 1.7rem;
+  }
+  
+  section.content-block p {
+    font-size: 1.5rem;
+  }
+  
+  .cs-footer {
+    font-size: 1rem;
+  }
+  
+  .carousel-button {
+    font-size: 2.5rem;
+  }
+  
+  .cs-back-link, .cs-nav a {
+    font-size: 1.2rem;
+  }
+
+  section.video-section {
+    max-width: 1600px;
+  }
+}
+
+/* Extra large screen styles */
+@media (min-width: 1920px) {
+  .cs-main-title {
+    font-size: 14rem;
+    max-width: 1920px;
+  }
+  
+  section {
+    max-width: 1920px;
+  }
+  
+  section.image.natural-size {
+    max-width: 1920px;
+  }
+  
+  section.Intro .sidebar {
+    font-size: 1.6rem;
+  }
+  
+  section.Intro .sidebar .cs-info-section h5 {
+    font-size: 1.4rem;
+  }
+  
+  section.Intro .sidebar .cs-info-subtext {
+    font-size: 1.2rem;
+  }
+  
+  section.Intro .lead h1 {
+    font-size: 12rem;
+  }
+  
+  section.Intro .lead p {
+    font-size: 3rem;
+  }
+  
+  section.content-block h2 {
+    font-size: 1.4rem;
+  }
+  
+  section.content-block h4 {
+    font-size: 2rem;
+  }
+  
+  section.content-block p {
+    font-size: 1.8rem;
+  }
+  
+  .cs-footer {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-button {
+    font-size: 3rem;
+    padding: 20px 25px;
+  }
+  
+  .cs-back-link, .cs-nav a {
+    font-size: 1.4rem;
+  }
+  
+  section {
+    padding: 4rem 2rem 1.5rem;
+  }
+
+  section.video-section {
+    max-width: 1920px;
+  }
+} 
+
+.line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.15em; /* Add bottom padding to accommodate descenders */
+  margin-bottom: -0.15em; /* Compensate for padding to maintain line spacing */
+}
+
+.line-inner {
+  display: inline-block;
+  will-change: transform, opacity;
+  transform-origin: bottom left; /* Ensure transform pivots from bottom */
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Once a section becomes visible, it stays that way */
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1), transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Case Study Navigation */
+.case-study-navigation {
+  max-width: 1280px;
+  margin: 4rem auto 4rem;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 2rem;
+}
+
+.case-study-navigation a {
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.3s ease;
+  display: block;
+  position: relative;
+  padding: 1rem;
+  margin: -1rem;
+  border-radius: 0.5rem;
+}
+
+.case-study-navigation a:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.prev-case-study {
+  text-align: left;
+}
+
+.next-case-study {
+  text-align: right;
+}
+
+.nav-label {
+  display: block;
+  font-size: 0.9rem;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.prev-case-study .nav-title::before,
+.next-case-study .nav-title::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.prev-case-study .nav-title::before {
+  margin-right: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'%3E%3C/line%3E%3Cpolyline points='12 19 5 12 12 5'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.next-case-study .nav-title::after {
+  margin-left: 0.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3Cpolyline points='12 5 19 12 12 19'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.prev-case-study:hover .nav-title::before {
+  transform: translateX(-5px);
+  opacity: 1;
+}
+
+.next-case-study:hover .nav-title::after {
+  transform: translateX(5px);
+  opacity: 1;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+  .case-study-navigation {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .next-case-study {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  .case-study-navigation {
+    max-width: 1600px;
+  }
+  
+  .nav-label {
+    font-size: 1rem;
+  }
+  
+  .nav-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .case-study-navigation {
+    max-width: 1920px;
+  }
+  
+  .nav-label {
+    font-size: 1.1rem;
+  }
+  
+  .nav-title {
+    font-size: 2rem;
+  }
+} 
+
+/* Add content visibility to improve rendering performance */
+.content-block {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px; /* Estimate height to avoid layout shifts */
+}
+
+/* Initial state for elements to prevent flashing before animation */
+.cs-main-title, .Into, section {
+  visibility: hidden;
+}
+
+.case-study-content-loaded .cs-main-title, .case-study-content-loaded .Into, .case-study-content-loaded section {
+   visibility: visible;
+}
+
+/* Improve lazy-loaded image behavior */
+img {
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img[loading="lazy"]:not([src=""]) {
+  opacity: 1;
+}
+
+/* Add a placeholder for images */
+.image-container, .image-item, .full-width {
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #eee;
+  border-top: 4px solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
+
+/* Styles for Team Member Display */
+.team-member-container {
+  margin-bottom: 0.8rem; /* Add some space between members */
+  line-height: 1.3; /* Adjust line height for two lines */
+}
+
+.team-member-name {
+  display: block; /* Ensure name is on its own line */
+}
+
+.team-member-title {
+  display: block!important; /* Ensure title is on its own line */
+  color: #999; /* Set title color to grey */
+}
+
+/* 2-Column layout for team members */
+.team-members-grid {
+  column-count: 2;
+  column-gap: 2rem; /* Match the main grid gap */
+}
+
+/* Prevent team member blocks from breaking across columns */
+.team-member-container {
+  break-inside: avoid;
+  page-break-inside: avoid; /* Older browsers */
+} 

@@ -1,0 +1,197 @@
+Starting WebP conversion process...
+Images will be converted with quality: 80
+Finding images to convert...
+Converting: public/images/me.JPG to public/images/me.webp
+Success: public/images/me.JPG (304K) -> public/images/me.webp (160K)
+Converting: public/images/designing-a-festival/2015-theme.jpg to public/images/designing-a-festival/2015-theme.webp
+Success: public/images/designing-a-festival/2015-theme.jpg (348K) -> public/images/designing-a-festival/2015-theme.webp (124K)
+Converting: public/images/designing-a-festival/2019-subway.jpeg to public/images/designing-a-festival/2019-subway.webp
+Success: public/images/designing-a-festival/2019-subway.jpeg (212K) -> public/images/designing-a-festival/2019-subway.webp ( 64K)
+Converting: public/images/designing-a-festival/2013-theme.jpg to public/images/designing-a-festival/2013-theme.webp
+Success: public/images/designing-a-festival/2013-theme.jpg (348K) -> public/images/designing-a-festival/2013-theme.webp ( 92K)
+Converting: public/images/designing-a-festival/2013-poster.jpg to public/images/designing-a-festival/2013-poster.webp
+Success: public/images/designing-a-festival/2013-poster.jpg (836K) -> public/images/designing-a-festival/2013-poster.webp (224K)
+Converting: public/images/designing-a-festival/banner.jpg to public/images/designing-a-festival/banner.webp
+Success: public/images/designing-a-festival/banner.jpg (332K) -> public/images/designing-a-festival/banner.webp ( 56K)
+Converting: public/images/designing-a-festival/2011-logo.jpg to public/images/designing-a-festival/2011-logo.webp
+Success: public/images/designing-a-festival/2011-logo.jpg (568K) -> public/images/designing-a-festival/2011-logo.webp ( 36K)
+Converting: public/images/designing-a-festival/2019-ads2.jpeg to public/images/designing-a-festival/2019-ads2.webp
+Success: public/images/designing-a-festival/2019-ads2.jpeg (1.5M) -> public/images/designing-a-festival/2019-ads2.webp (572K)
+Converting: public/images/designing-a-festival/2015-assets.jpg to public/images/designing-a-festival/2015-assets.webp
+Success: public/images/designing-a-festival/2015-assets.jpg (248K) -> public/images/designing-a-festival/2015-assets.webp ( 60K)
+Skipping already converted file: public/images/designing-a-festival/2008-poster.jpg
+Converting: public/images/designing-a-festival/2015-app.jpg to public/images/designing-a-festival/2015-app.webp
+Success: public/images/designing-a-festival/2015-app.jpg (260K) -> public/images/designing-a-festival/2015-app.webp ( 80K)
+Converting: public/images/designing-a-festival/2019-billboard.png to public/images/designing-a-festival/2019-billboard.webp
+Success: public/images/designing-a-festival/2019-billboard.png (1.3M) -> public/images/designing-a-festival/2019-billboard.webp (1.1M)
+Converting: public/images/designing-a-festival/2019-poster1.png to public/images/designing-a-festival/2019-poster1.webp
+Success: public/images/designing-a-festival/2019-poster1.png (2.0M) -> public/images/designing-a-festival/2019-poster1.webp (2.4M)
+Converting: public/images/designing-a-festival/2015-poster4.jpg to public/images/designing-a-festival/2015-poster4.webp
+Success: public/images/designing-a-festival/2015-poster4.jpg (360K) -> public/images/designing-a-festival/2015-poster4.webp (128K)
+Converting: public/images/designing-a-festival/2015-poster1.jpg to public/images/designing-a-festival/2015-poster1.webp
+Success: public/images/designing-a-festival/2015-poster1.jpg (344K) -> public/images/designing-a-festival/2015-poster1.webp (124K)
+Converting: public/images/designing-a-festival/2023-pitch.png to public/images/designing-a-festival/2023-pitch.webp
+Success: public/images/designing-a-festival/2023-pitch.png (656K) -> public/images/designing-a-festival/2023-pitch.webp (348K)
+Converting: public/images/designing-a-festival/2015-poster3.jpg to public/images/designing-a-festival/2015-poster3.webp
+Success: public/images/designing-a-festival/2015-poster3.jpg (352K) -> public/images/designing-a-festival/2015-poster3.webp (128K)
+Converting: public/images/designing-a-festival/2013-magazine.jpg to public/images/designing-a-festival/2013-magazine.webp
+Success: public/images/designing-a-festival/2013-magazine.jpg (408K) -> public/images/designing-a-festival/2013-magazine.webp (128K)
+Converting: public/images/designing-a-festival/2015-poster2.jpg to public/images/designing-a-festival/2015-poster2.webp
+Success: public/images/designing-a-festival/2015-poster2.jpg (348K) -> public/images/designing-a-festival/2015-poster2.webp (124K)
+Converting: public/images/designing-a-festival/2011-poster.jpg to public/images/designing-a-festival/2011-poster.webp
+Success: public/images/designing-a-festival/2011-poster.jpg (452K) -> public/images/designing-a-festival/2011-poster.webp (152K)
+Converting: public/images/designing-a-festival/2017-theme.jpg to public/images/designing-a-festival/2017-theme.webp
+Success: public/images/designing-a-festival/2017-theme.jpg (592K) -> public/images/designing-a-festival/2017-theme.webp (240K)
+Converting: public/images/designing-a-festival/2013-banners.jpg to public/images/designing-a-festival/2013-banners.webp
+Success: public/images/designing-a-festival/2013-banners.jpg (464K) -> public/images/designing-a-festival/2013-banners.webp (136K)
+Converting: public/images/designing-a-festival/2017-events.jpg to public/images/designing-a-festival/2017-events.webp
+Success: public/images/designing-a-festival/2017-events.jpg (308K) -> public/images/designing-a-festival/2017-events.webp (116K)
+Converting: public/images/designing-a-festival/2013-assets.jpg to public/images/designing-a-festival/2013-assets.webp
+Success: public/images/designing-a-festival/2013-assets.jpg (664K) -> public/images/designing-a-festival/2013-assets.webp (184K)
+Converting: public/images/designing-a-festival/2015-guidelines.jpg to public/images/designing-a-festival/2015-guidelines.webp
+Success: public/images/designing-a-festival/2015-guidelines.jpg (188K) -> public/images/designing-a-festival/2015-guidelines.webp ( 28K)
+Converting: public/images/designing-a-festival/2017-poster.jpg to public/images/designing-a-festival/2017-poster.webp
+Success: public/images/designing-a-festival/2017-poster.jpg (484K) -> public/images/designing-a-festival/2017-poster.webp (164K)
+Converting: public/images/designing-a-festival/2017-Nowruz.jpg to public/images/designing-a-festival/2017-Nowruz.webp
+Success: public/images/designing-a-festival/2017-Nowruz.jpg (436K) -> public/images/designing-a-festival/2017-Nowruz.webp (176K)
+Converting: public/images/designing-a-festival/2019-banner.jpeg to public/images/designing-a-festival/2019-banner.webp
+Success: public/images/designing-a-festival/2019-banner.jpeg (108K) -> public/images/designing-a-festival/2019-banner.webp ( 36K)
+Converting: public/images/designing-a-festival/2017-poster2.jpg to public/images/designing-a-festival/2017-poster2.webp
+Success: public/images/designing-a-festival/2017-poster2.jpg (492K) -> public/images/designing-a-festival/2017-poster2.webp (164K)
+Converting: public/images/designing-a-festival/2011-guidelines.jpg to public/images/designing-a-festival/2011-guidelines.webp
+Success: public/images/designing-a-festival/2011-guidelines.jpg (672K) -> public/images/designing-a-festival/2011-guidelines.webp (108K)
+Converting: public/images/designing-a-festival/2013-ads.jpg to public/images/designing-a-festival/2013-ads.webp
+Success: public/images/designing-a-festival/2013-ads.jpg (772K) -> public/images/designing-a-festival/2013-ads.webp (196K)
+Converting: public/images/designing-a-festival/golobolbol.jpg to public/images/designing-a-festival/golobolbol.webp
+Success: public/images/designing-a-festival/golobolbol.jpg (240K) -> public/images/designing-a-festival/golobolbol.webp (140K)
+Converting: public/images/designing-a-festival/2019-poster3.jpeg to public/images/designing-a-festival/2019-poster3.webp
+Success: public/images/designing-a-festival/2019-poster3.jpeg (1.0M) -> public/images/designing-a-festival/2019-poster3.webp (372K)
+Skipping already converted file: public/images/designing-a-festival/2008-logo.jpg
+Converting: public/images/designing-a-festival/2013-app.jpg to public/images/designing-a-festival/2013-app.webp
+Success: public/images/designing-a-festival/2013-app.jpg (340K) -> public/images/designing-a-festival/2013-app.webp (116K)
+Converting: public/images/designing-a-festival/2017-guidelines.jpg to public/images/designing-a-festival/2017-guidelines.webp
+Success: public/images/designing-a-festival/2017-guidelines.jpg (244K) -> public/images/designing-a-festival/2017-guidelines.webp ( 92K)
+Converting: public/images/designing-a-festival/2019-poster2.jpeg to public/images/designing-a-festival/2019-poster2.webp
+Success: public/images/designing-a-festival/2019-poster2.jpeg (300K) -> public/images/designing-a-festival/2019-poster2.webp ( 88K)
+Converting: public/images/designing-a-festival/2023-poster1.jpg to public/images/designing-a-festival/2023-poster1.webp
+Success: public/images/designing-a-festival/2023-poster1.jpg (3.7M) -> public/images/designing-a-festival/2023-poster1.webp (744K)
+Converting: public/images/designing-a-festival/2023-poster3.jpg to public/images/designing-a-festival/2023-poster3.webp
+Success: public/images/designing-a-festival/2023-poster3.jpg (3.1M) -> public/images/designing-a-festival/2023-poster3.webp (524K)
+Converting: public/images/designing-a-festival/2023-hero.png to public/images/designing-a-festival/2023-hero.webp
+Success: public/images/designing-a-festival/2023-hero.png (4.3M) -> public/images/designing-a-festival/2023-hero.webp (4.0M)
+Skipping already converted file: public/images/designing-a-festival/2011-flyers.jpg
+Converting: public/images/designing-a-festival/2019-pitch.png to public/images/designing-a-festival/2019-pitch.webp
+Success: public/images/designing-a-festival/2019-pitch.png (2.3M) -> public/images/designing-a-festival/2019-pitch.webp (2.6M)
+Converting: public/images/designing-a-festival/2023-poster2.jpg to public/images/designing-a-festival/2023-poster2.webp
+Success: public/images/designing-a-festival/2023-poster2.jpg (2.9M) -> public/images/designing-a-festival/2023-poster2.webp (356K)
+Converting: public/images/scrolling-in-money/before.png to public/images/scrolling-in-money/before.webp
+Success: public/images/scrolling-in-money/before.png (636K) -> public/images/scrolling-in-money/before.webp (480K)
+Converting: public/images/scrolling-in-money/new-ads.png to public/images/scrolling-in-money/new-ads.webp
+Success: public/images/scrolling-in-money/new-ads.png (1.1M) -> public/images/scrolling-in-money/new-ads.webp (880K)
+Converting: public/images/scrolling-in-money/rich-text-ads.png to public/images/scrolling-in-money/rich-text-ads.webp
+Success: public/images/scrolling-in-money/rich-text-ads.png (348K) -> public/images/scrolling-in-money/rich-text-ads.webp (292K)
+Converting: public/images/scrolling-in-money/rich-ads.png to public/images/scrolling-in-money/rich-ads.webp
+Success: public/images/scrolling-in-money/rich-ads.png (144K) -> public/images/scrolling-in-money/rich-ads.webp ( 88K)
+Converting: public/images/scrolling-in-money/wireframes.png to public/images/scrolling-in-money/wireframes.webp
+Success: public/images/scrolling-in-money/wireframes.png (1.3M) -> public/images/scrolling-in-money/wireframes.webp (588K)
+Converting: public/images/scrolling-in-money/campaign-before.png to public/images/scrolling-in-money/campaign-before.webp
+Success: public/images/scrolling-in-money/campaign-before.png (272K) -> public/images/scrolling-in-money/campaign-before.webp (132K)
+Converting: public/images/scrolling-in-money/cards.png to public/images/scrolling-in-money/cards.webp
+Success: public/images/scrolling-in-money/cards.png (884K) -> public/images/scrolling-in-money/cards.webp (340K)
+Converting: public/images/scrolling-in-money/stepper.png to public/images/scrolling-in-money/stepper.webp
+Success: public/images/scrolling-in-money/stepper.png (252K) -> public/images/scrolling-in-money/stepper.webp (120K)
+Converting: public/images/scrolling-in-money/summary-final.png to public/images/scrolling-in-money/summary-final.webp
+Success: public/images/scrolling-in-money/summary-final.png (424K) -> public/images/scrolling-in-money/summary-final.webp (260K)
+Converting: public/images/scrolling-in-money/campaign-explorations.png to public/images/scrolling-in-money/campaign-explorations.webp
+Success: public/images/scrolling-in-money/campaign-explorations.png (2.6M) -> public/images/scrolling-in-money/campaign-explorations.webp (2.3M)
+Converting: public/images/project1.jpg to public/images/project1.webp
+Success: public/images/project1.jpg (3.7M) -> public/images/project1.webp (424K)
+Converting: public/images/talking-to-strangers/offline-stats.jpg to public/images/talking-to-strangers/offline-stats.webp
+Success: public/images/talking-to-strangers/offline-stats.jpg (140K) -> public/images/talking-to-strangers/offline-stats.webp ( 44K)
+Converting: public/images/talking-to-strangers/uxr.png to public/images/talking-to-strangers/uxr.webp
+Success: public/images/talking-to-strangers/uxr.png (1.3M) -> public/images/talking-to-strangers/uxr.webp (752K)
+Converting: public/images/talking-to-strangers/roadmap.png to public/images/talking-to-strangers/roadmap.webp
+Success: public/images/talking-to-strangers/roadmap.png (1.2M) -> public/images/talking-to-strangers/roadmap.webp (732K)
+Converting: public/images/talking-to-strangers/t2t-process.png to public/images/talking-to-strangers/t2t-process.webp
+Success: public/images/talking-to-strangers/t2t-process.png (3.8M) -> public/images/talking-to-strangers/t2t-process.webp (3.4M)
+Converting: public/images/talking-to-strangers/offline-problem.jpg to public/images/talking-to-strangers/offline-problem.webp
+Success: public/images/talking-to-strangers/offline-problem.jpg (188K) -> public/images/talking-to-strangers/offline-problem.webp ( 76K)
+Converting: public/images/talking-to-strangers/what-we-tested.jpg to public/images/talking-to-strangers/what-we-tested.webp
+Success: public/images/talking-to-strangers/what-we-tested.jpg (224K) -> public/images/talking-to-strangers/what-we-tested.webp ( 88K)
+Converting: public/images/talking-to-strangers/offsite.jpg to public/images/talking-to-strangers/offsite.webp
+Success: public/images/talking-to-strangers/offsite.jpg (308K) -> public/images/talking-to-strangers/offsite.webp ( 92K)
+Converting: public/images/talking-to-strangers/contextual-promo.jpg to public/images/talking-to-strangers/contextual-promo.webp
+Success: public/images/talking-to-strangers/contextual-promo.jpg (208K) -> public/images/talking-to-strangers/contextual-promo.webp ( 64K)
+Converting: public/images/talking-to-strangers/tap-to-translate.png to public/images/talking-to-strangers/tap-to-translate.webp
+Success: public/images/talking-to-strangers/tap-to-translate.png (3.8M) -> public/images/talking-to-strangers/tap-to-translate.webp (3.4M)
+Converting: public/images/talking-to-strangers/offline-testing.jpg to public/images/talking-to-strangers/offline-testing.webp
+Success: public/images/talking-to-strangers/offline-testing.jpg (224K) -> public/images/talking-to-strangers/offline-testing.webp ( 88K)
+Converting: public/images/talking-to-strangers/designsystem.png to public/images/talking-to-strangers/designsystem.webp
+Success: public/images/talking-to-strangers/designsystem.png (2.7M) -> public/images/talking-to-strangers/designsystem.webp (2.3M)
+Converting: public/images/talking-to-strangers/foundations.png to public/images/talking-to-strangers/foundations.webp
+Success: public/images/talking-to-strangers/foundations.png (1.3M) -> public/images/talking-to-strangers/foundations.webp (692K)
+Converting: public/images/the-arsenal-of-startups/emails-mobile.png to public/images/the-arsenal-of-startups/emails-mobile.webp
+Success: public/images/the-arsenal-of-startups/emails-mobile.png (2.2M) -> public/images/the-arsenal-of-startups/emails-mobile.webp (2.5M)
+Converting: public/images/the-arsenal-of-startups/code.png to public/images/the-arsenal-of-startups/code.webp
+Success: public/images/the-arsenal-of-startups/code.png (416K) -> public/images/the-arsenal-of-startups/code.webp (300K)
+Converting: public/images/the-arsenal-of-startups/other-landing-pages.png to public/images/the-arsenal-of-startups/other-landing-pages.webp
+Success: public/images/the-arsenal-of-startups/other-landing-pages.png (3.4M) -> public/images/the-arsenal-of-startups/other-landing-pages.webp (3.3M)
+Converting: public/images/the-arsenal-of-startups/tweets.png to public/images/the-arsenal-of-startups/tweets.webp
+Success: public/images/the-arsenal-of-startups/tweets.png (1.3M) -> public/images/the-arsenal-of-startups/tweets.webp (2.1M)
+Converting: public/images/the-arsenal-of-startups/landing-page-checker.png to public/images/the-arsenal-of-startups/landing-page-checker.webp
+Success: public/images/the-arsenal-of-startups/landing-page-checker.png (520K) -> public/images/the-arsenal-of-startups/landing-page-checker.webp (312K)
+Converting: public/images/the-arsenal-of-startups/main-landing-page.png to public/images/the-arsenal-of-startups/main-landing-page.webp
+Success: public/images/the-arsenal-of-startups/main-landing-page.png (4.2M) -> public/images/the-arsenal-of-startups/main-landing-page.webp (3.9M)
+Converting: public/images/the-arsenal-of-startups/landing-pages.png to public/images/the-arsenal-of-startups/landing-pages.webp
+Success: public/images/the-arsenal-of-startups/landing-pages.png (1.3M) -> public/images/the-arsenal-of-startups/landing-pages.webp (932K)
+Converting: public/images/the-arsenal-of-startups/blog.png to public/images/the-arsenal-of-startups/blog.webp
+Success: public/images/the-arsenal-of-startups/blog.png (576K) -> public/images/the-arsenal-of-startups/blog.webp (404K)
+Converting: public/images/the-arsenal-of-startups/gift.jpg to public/images/the-arsenal-of-startups/gift.webp
+Success: public/images/the-arsenal-of-startups/gift.jpg (208K) -> public/images/the-arsenal-of-startups/gift.webp ( 28K)
+Converting: public/images/the-arsenal-of-startups/analytics.png to public/images/the-arsenal-of-startups/analytics.webp
+Success: public/images/the-arsenal-of-startups/analytics.png (292K) -> public/images/the-arsenal-of-startups/analytics.webp (172K)
+Converting: public/images/the-arsenal-of-startups/landing-pages2.png to public/images/the-arsenal-of-startups/landing-pages2.webp
+Success: public/images/the-arsenal-of-startups/landing-pages2.png (2.5M) -> public/images/the-arsenal-of-startups/landing-pages2.webp (2.6M)
+Converting: public/images/the-arsenal-of-startups/litmus-wireframes.png to public/images/the-arsenal-of-startups/litmus-wireframes.webp
+Success: public/images/the-arsenal-of-startups/litmus-wireframes.png (372K) -> public/images/the-arsenal-of-startups/litmus-wireframes.webp (188K)
+Converting: public/images/the-arsenal-of-startups/emails.png to public/images/the-arsenal-of-startups/emails.webp
+Success: public/images/the-arsenal-of-startups/emails.png (2.0M) -> public/images/the-arsenal-of-startups/emails.webp (2.5M)
+Converting: public/images/the-arsenal-of-startups/all-screens.png to public/images/the-arsenal-of-startups/all-screens.webp
+Success: public/images/the-arsenal-of-startups/all-screens.png (1.4M) -> public/images/the-arsenal-of-startups/all-screens.webp (852K)
+Converting: public/images/the-arsenal-of-startups/billing.png to public/images/the-arsenal-of-startups/billing.webp
+Success: public/images/the-arsenal-of-startups/billing.png (256K) -> public/images/the-arsenal-of-startups/billing.webp (136K)
+Converting: public/images/the-arsenal-of-startups/blog2.png to public/images/the-arsenal-of-startups/blog2.webp
+Success: public/images/the-arsenal-of-startups/blog2.png (860K) -> public/images/the-arsenal-of-startups/blog2.webp (596K)
+Converting: public/images/the-arsenal-of-startups/desktop1.png to public/images/the-arsenal-of-startups/desktop1.webp
+Success: public/images/the-arsenal-of-startups/desktop1.png (332K) -> public/images/the-arsenal-of-startups/desktop1.webp (220K)
+Converting: public/images/fish-in-your-ear/what-users-saw.png to public/images/fish-in-your-ear/what-users-saw.webp
+Success: public/images/fish-in-your-ear/what-users-saw.png (164K) -> public/images/fish-in-your-ear/what-users-saw.webp (112K)
+Converting: public/images/fish-in-your-ear/first-designs.png to public/images/fish-in-your-ear/first-designs.webp
+Success: public/images/fish-in-your-ear/first-designs.png (316K) -> public/images/fish-in-your-ear/first-designs.webp (228K)
+Converting: public/images/fish-in-your-ear/chart.png to public/images/fish-in-your-ear/chart.webp
+Success: public/images/fish-in-your-ear/chart.png (244K) -> public/images/fish-in-your-ear/chart.webp (172K)
+Converting: public/images/fish-in-your-ear/quotes.png to public/images/fish-in-your-ear/quotes.webp
+Success: public/images/fish-in-your-ear/quotes.png (296K) -> public/images/fish-in-your-ear/quotes.webp (216K)
+Converting: public/images/fish-in-your-ear/hypothesis.png to public/images/fish-in-your-ear/hypothesis.webp
+Success: public/images/fish-in-your-ear/hypothesis.png ( 84K) -> public/images/fish-in-your-ear/hypothesis.webp ( 52K)
+Converting: public/images/fish-in-your-ear/twitter.png to public/images/fish-in-your-ear/twitter.webp
+Success: public/images/fish-in-your-ear/twitter.png (156K) -> public/images/fish-in-your-ear/twitter.webp (100K)
+Converting: public/images/fish-in-your-ear/conversation.png to public/images/fish-in-your-ear/conversation.webp
+Success: public/images/fish-in-your-ear/conversation.png (228K) -> public/images/fish-in-your-ear/conversation.webp (120K)
+Converting: public/images/fish-in-your-ear/take2.png to public/images/fish-in-your-ear/take2.webp
+Success: public/images/fish-in-your-ear/take2.png ( 84K) -> public/images/fish-in-your-ear/take2.webp ( 60K)
+Converting: public/images/fish-in-your-ear/buds.png to public/images/fish-in-your-ear/buds.webp
+Success: public/images/fish-in-your-ear/buds.png (1.1M) -> public/images/fish-in-your-ear/buds.webp (664K)
+Converting: public/images/fish-in-your-ear/icebreaker.png to public/images/fish-in-your-ear/icebreaker.webp
+Success: public/images/fish-in-your-ear/icebreaker.png (772K) -> public/images/fish-in-your-ear/icebreaker.webp (532K)
+Converting: public/images/fish-in-your-ear/solution.png to public/images/fish-in-your-ear/solution.webp
+Success: public/images/fish-in-your-ear/solution.png (128K) -> public/images/fish-in-your-ear/solution.webp ( 84K)
+Updating markdown files to reference WebP images...
+Updating: public/content/case-studies/designing-for-ai-at-google-translate.md
+Updating: public/content/case-studies/talking-to-strangers.md
+Updating: public/content/case-studies/the-arsenal-of-startups.md
+Updating: public/content/case-studies/scrolling-in-money.md
+Updating: public/content/case-studies/designing-a-festival.md
+Updating: public/content/case-studies/fish-in-your-ear.md
+Conversion and update process complete!
+Original images were backed up to public/images_original/

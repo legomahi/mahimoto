@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f0f0f0"/>
+  <g transform="translate(640, 360)">
+    <circle cx="0" cy="0" r="80" fill="#333333" opacity="0.9"/>
+    <polygon points="-30,-50 50,0 -30,50" fill="white" transform="translate(5, 0)"/>
+  </g>
+  <text x="640" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">
+    Video Preview
+  </text>
+</svg>

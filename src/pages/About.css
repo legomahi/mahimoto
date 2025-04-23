@@ -1,0 +1,208 @@
+.about-container {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  color: #222;
+  font-family: 'Lora', serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  padding-top:5rem;
+}
+
+a{color:#000}
+
+.about-container h1,
+.about-container h2,
+.about-container h3,
+.about-container h4,
+.about-container h5,
+.about-container h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background ribbon styles */
+.background-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ribbon-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left:80%;
+  transform: scale(4);
+}
+
+.ribbon-path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Content styles */
+.about-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.about-title {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+  margin: 6rem 0 4rem;
+  max-width: 900px;
+}
+
+.about-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.about-sections {
+  margin-bottom: 6rem;
+  padding-top:11.5rem;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.about-section-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-section li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.45rem;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.about-section li::before {
+  content: "\27F6";
+  position: absolute;
+  left: 0;
+  font-weight:normal;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+    margin: 4rem 0 3rem;
+  }
+  
+  .about-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-section-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+  
+  .image-placeholder {
+    max-width: 100%;
+  }
+
+  .about-sections {
+    margin-bottom: 6rem;
+    padding-top:1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-title {
+    font-size: 6rem;
+  }
+  
+  .about-text p {
+    font-size: 1.4rem;
+  }
+  
+  .about-section p, 
+  .about-section li {
+    font-size: 1.3rem;
+  }
+}
+
+/* Typography assignments */
+.background-ribbon text,
+.ribbon text {
+  font-family: "proxima-nova", sans-serif;
+} 
